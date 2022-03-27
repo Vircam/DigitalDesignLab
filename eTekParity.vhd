@@ -1,7 +1,8 @@
 ------------------------------------
 --Tek Eslik bitini hesaplayan devre
 --Giris bitleri: A
---Çikis bitleri: F
+--Ã‡ikis bitleri: F
+--G-15 Mart 2022
 ------------------------------------
 
 library IEEE;
