@@ -1,17 +1,18 @@
--- standart 4 bit giri?li 7 bit çik??l?
--- Giris(ler): A(4 bit), B(7 bit, test için kar??ya iletildi?i dü?ünülen)
+-- standart 4 bit giri?li 7 bit Ã§ik??l?
+-- Giris(ler): A(4 bit), B(7 bit, test iÃ§in kar??ya iletildi?i dÃ¼?Ã¼nÃ¼len)
 -- Cikis(lar): F(7 bit, hesaplanan), S(3 bit, hamming hata bulma bitleri)
--- ödev: en az 3 kez farkl? bitleri bozarak hata düzeltme gerçekle?tiriniz.
+-- Ã¶dev: en az 3 kez farkl? bitleri bozarak hata dÃ¼zeltme gerÃ§ekle?tiriniz.
+-- G-15 Mart 2022
 ---------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
 Entity eHam is
 port (	                                                              --        a6a5a4 a3a2a1a0
-        A: in std_logic_vector(3 downto 0);	-- 4 bit veri,        örn: 1110 ->        1 1 1 0
+        A: in std_logic_vector(3 downto 0);	-- 4 bit veri,        Ã¶rn: 1110 ->        1 1 1 0
         fA: out std_logic_vector(6 downto 0); --                               0 1 0  1 1 1 0 
-		    B: in std_logic_vector(6 downto 0);	-- 7 bit test verisi, örn:      -> 0 1 0  1 1 0 0, a1 bozulmu? olsun
-		    Fb: out std_logic_vector(6 downto 0);-- 7 bit  A çikisi	     :      -> 0 0 1  1 1 0 0, hesaplana
+		    B: in std_logic_vector(6 downto 0);	-- 7 bit test verisi, Ã¶rn:      -> 0 1 0  1 1 0 0, a1 bozulmu? olsun
+		    Fb: out std_logic_vector(6 downto 0);-- 7 bit  A Ã§ikisi	     :      -> 0 0 1  1 1 0 0, hesaplana
 		    S: out std_logic_vector(2 downto 0)  --                      :      -> 0 1 1         
 		                                                                    --     s6s5s4   (s4s5s6)=(110)    , a1'e denk geliyor
 	);
